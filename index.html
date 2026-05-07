@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vignesh Reddy - AI/ML Student and Frontend Developer building intelligent systems and premium web experiences."
+    />
+    <meta name="theme-color" content="#070b16" />
+    <title>Vignesh Reddy | AI/ML Student & Frontend Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <div class="bg-blobs" aria-hidden="true">
+      <div class="blob blob--a"></div>
+      <div class="blob blob--b"></div>
+      <div class="blob blob--c"></div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav-wrap">
+      <div class="nav container">
+        <a href="#home" class="brand" aria-label="Go to home">
+          <span class="vr-logo" aria-hidden="true">
+            <svg viewBox="0 0 100 100" class="vr-logo__svg">
+              <defs>
+                <linearGradient id="vrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#42e8ff" />
+                  <stop offset="55%" stop-color="#5ba9ff" />
+                  <stop offset="100%" stop-color="#7d87ff" />
+                </linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="44" fill="none" stroke="url(#vrGrad)" stroke-width="4" />
+              <text x="50" y="60" text-anchor="middle">VR</text>
+            </svg>
+          </span>
+          <span class="brand__text">Vignesh Reddy</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#home" data-nav="home" class="nav__link is-active">Home</a>
+          <a href="#about" data-nav="about" class="nav__link">About</a>
+          <a href="#skills" data-nav="skills" class="nav__link">Skills</a>
+          <a href="#projects" data-nav="projects" class="nav__link">Projects</a>
+          <a href="#exploring" data-nav="exploring" class="nav__link">Exploring</a>
+          <a href="#contact" data-nav="contact" class="nav__link">Contact</a>
+        </nav>
+
+        <div class="nav__actions">
+          <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M21 12.79A9 9 0 0 1 11.21 3c0 .34.02.67.06 1A7 7 0 1 0 20 13.73c.33.04.66.06 1 .06Z"
+              />
+            </svg>
+          </button>
+          <button class="icon-btn nav__menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+            <span class="hamburger"><span></span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-mobile container" id="mobileNav" hidden>
+        <a href="#home" data-nav="home" class="nav-mobile__link">Home</a>
+        <a href="#about" data-nav="about" class="nav-mobile__link">About</a>
+        <a href="#skills" data-nav="skills" class="nav-mobile__link">Skills</a>
+        <a href="#projects" data-nav="projects" class="nav-mobile__link">Projects</a>
+        <a href="#exploring" data-nav="exploring" class="nav-mobile__link">Exploring</a>
+        <a href="#contact" data-nav="contact" class="nav-mobile__link">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section hero" id="home" data-section>
+        <div class="container hero__grid">
+          <div class="hero__content" data-reveal>
+            <p class="eyebrow">AI/ML Student & Frontend Developer</p>
+            <h1 class="hero__title">
+              Hi, I'm <span class="grad-text">Vignesh Reddy</span>.
+            </h1>
+            <p class="hero__typing">
+              <span id="typing"></span><span class="caret" aria-hidden="true"></span>
+            </p>
+            <p class="hero__desc">
+              I design and build intelligent software experiences with clean UI, thoughtful product decisions, and
+              smooth frontend execution.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary ripple" href="#projects">View Projects</a>
+              <a class="btn btn--ghost ripple" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero__visual" data-reveal data-reveal-delay="120">
+            <article class="profile-card glass" id="tiltCard">
+              <div class="profile-card__halo"></div>
+              <div class="profile-card__image" role="img" aria-label="Vignesh profile placeholder">VR</div>
+              <p class="profile-card__name">Vignesh Reddy</p>
+              <p class="profile-card__role">AI/ML Student & Frontend Developer</p>
+            </article>
+            <div class="tech-badge tech-badge--a">AI/ML</div>
+            <div class="tech-badge tech-badge--b">JavaScript</div>
+            <div class="tech-badge tech-badge--c">Python</div>
+            <div class="tech-badge tech-badge--d">UI Systems</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" data-section>
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__kicker">About</p>
+            <h2 class="section__title">Building practical AI-powered products with premium interface quality.</h2>
+            <p class="section__desc">
+              I am a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning.
+              I enjoy solving real-world problems by combining intelligent logic with modern frontend design and strong
+              product thinking.
+            </p>
+          </div>
+          <div class="grid grid--3">
+            <article class="glass card" data-reveal>
+              <h3 class="card__title">Product Thinking</h3>
+              <p class="card__text">
+                I focus on user intent, clarity, and flow before implementation, so interfaces stay useful and focused.
+              </p>
+            </article>
+            <article class="glass card" data-reveal data-reveal-delay="70">
+              <h3 class="card__title">Frontend Engineering</h3>
+              <p class="card__text">
+                I build responsive and maintainable UI with polished interactions, balanced spacing, and clean structure.
+              </p>
+            </article>
+            <article class="glass card" data-reveal data-reveal-delay="140">
+              <h3 class="card__title">AI/ML Exploration</h3>
+              <p class="card__text">
+                I explore practical AI workflows, model integration concepts, and automation ideas through hands-on projects.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" data-section>
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__kicker">Skills</p>
+            <h2 class="section__title">Technical stack across frontend, software, and AI foundations.</h2>
+          </div>
+          <div class="grid grid--2">
+            <article class="glass card" data-reveal>
+              <div class="bars">
+                <div class="bar" data-progress="92"><div class="bar__top"><span>HTML5</span><span class="bar__value">92%</span></div><div class="bar__track"><span class="bar__fill"></span></div></div>
+                <div class="bar" data-progress="88"><div class="bar__top"><span>CSS3</span><span class="bar__value">88%</span></div><div class="bar__track"><span class="bar__fill"></span></div></div>
+                <div class="bar" data-progress="86"><div class="bar__top"><span>JavaScript</span><span class="bar__value">86%</span></div><div class="bar__track"><span class="bar__fill"></span></div></div>
+                <div class="bar" data-progress="74"><div class="bar__top"><span>TypeScript</span><span class="bar__value">74%</span></div><div class="bar__track"><span class="bar__fill"></span></div></div>
+                <div class="bar" data-progress="78"><div class="bar__top"><span>Python</span><span class="bar__value">78%</span></div><div class="bar__track"><span class="bar__fill"></span></div></div>
+                <div class="bar" data-progress="72"><div class="bar__top"><span>Java</span><span class="bar__value">72%</span></div><div class="bar__track"><span class="bar__fill"></span></div></div>
+              </div>
+            </article>
+            <article class="glass card skill-chip-grid" data-reveal data-reveal-delay="100">
+              <div class="skill-chip">Firebase</div>
+              <div class="skill-chip">Node.js</div>
+              <div class="skill-chip">UI/UX</div>
+              <div class="skill-chip">Git & GitHub</div>
+              <div class="skill-chip">Responsive Design</div>
+              <div class="skill-chip">API Integration</div>
+              <div class="skill-chip">Design Systems</div>
+              <div class="skill-chip">Frontend Architecture</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" data-section>
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__kicker">Projects</p>
+            <h2 class="section__title">Project showcase with product-focused execution.</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="glass project-card" data-reveal>
+              <div class="project-card__preview">ResQnet</div>
+              <h3 class="project-card__title">ResQnet</h3>
+              <p class="project-card__desc">
+                AI-powered disaster alert and emergency response platform with chatbot support and community safety tools.
+              </p>
+              <div class="stack">
+                <span class="stack__chip">AI</span><span class="stack__chip">ML</span><span class="stack__chip">Realtime</span>
+              </div>
+              <div class="project-card__actions">
+                <a class="btn btn--ghost ripple" href="https://github.com/Vigneshreddy413" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn btn--primary ripple" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </article>
+
+            <article class="glass project-card" data-reveal data-reveal-delay="80">
+              <div class="project-card__preview">Aqua Shield</div>
+              <h3 class="project-card__title">Aqua Shield</h3>
+              <p class="project-card__desc">
+                Smart water monitoring and safety platform focused on intelligent tracking, awareness, and environmental protection.
+              </p>
+              <div class="stack">
+                <span class="stack__chip">IoT Ready</span><span class="stack__chip">Analytics</span><span class="stack__chip">Dashboard</span>
+              </div>
+              <div class="project-card__actions">
+                <a class="btn btn--ghost ripple" href="https://github.com/Vigneshreddy413" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn btn--primary ripple" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </article>
+
+            <article class="glass project-card" data-reveal data-reveal-delay="160">
+              <div class="project-card__preview">Portfolio Website</div>
+              <h3 class="project-card__title">Portfolio Website</h3>
+              <p class="project-card__desc">
+                Modern responsive portfolio with premium glassmorphism UI and advanced frontend interactions.
+              </p>
+              <div class="stack">
+                <span class="stack__chip">HTML</span><span class="stack__chip">CSS</span><span class="stack__chip">JavaScript</span>
+              </div>
+              <div class="project-card__actions">
+                <a class="btn btn--ghost ripple" href="https://github.com/Vigneshreddy413" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn btn--primary ripple" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="exploring" data-section>
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__kicker">Currently Exploring</p>
+            <h2 class="section__title">Future-focused technical directions.</h2>
+          </div>
+          <div class="explore-grid">
+            <div class="glass explore-item" data-reveal>AI Integration</div>
+            <div class="glass explore-item" data-reveal data-reveal-delay="60">Frontend Architecture</div>
+            <div class="glass explore-item" data-reveal data-reveal-delay="120">UI Systems</div>
+            <div class="glass explore-item" data-reveal data-reveal-delay="180">API Development</div>
+            <div class="glass explore-item" data-reveal data-reveal-delay="240">Modern Animations</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" data-section>
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__kicker">Contact</p>
+            <h2 class="section__title">Let's connect.</h2>
+            <p class="section__desc">Open to internship opportunities, collaboration, and meaningful product work.</p>
+          </div>
+          <div class="grid grid--2">
+            <form class="glass card form" id="contactForm" data-reveal>
+              <label for="name" class="label">Name</label>
+              <input class="input" id="name" name="name" type="text" required placeholder="Your name" />
+              <label for="email" class="label">Email</label>
+              <input class="input" id="email" name="email" type="email" required placeholder="your@email.com" />
+              <label for="message" class="label">Message</label>
+              <textarea class="input input--area" id="message" name="message" rows="5" required placeholder="Tell me about your opportunity"></textarea>
+              <button class="btn btn--primary btn--full ripple" type="submit">Send Message</button>
+            </form>
+
+            <aside class="glass card social-cards" data-reveal data-reveal-delay="100">
+              <a href="mailto:vigneshreddy413@gmail.com" class="social-card">Email: vigneshreddy413@gmail.com</a>
+              <a href="https://github.com/Vigneshreddy413" target="_blank" rel="noreferrer" class="social-card">GitHub: Vigneshreddy413</a>
+              <a href="https://www.linkedin.com/in/m-vignesh-reddy-7883b9302" target="_blank" rel="noreferrer" class="social-card">LinkedIn: M Vignesh Reddy</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Vignesh Reddy</p>
+        <div class="footer__links">
+          <a href="https://github.com/Vigneshreddy413" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/m-vignesh-reddy-7883b9302" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:vigneshreddy413@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" hidden><span id="toastText">Message sent.</span></div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
